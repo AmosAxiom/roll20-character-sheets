@@ -1,4 +1,4 @@
-.sheet-FCEsheet {
+.sheet-Rp20v1sheet {
     padding: 10px;
 	background: linear-gradient(to bottom, rgb(180,180,200), white);
 
@@ -48,6 +48,10 @@ hr {
 }
 
 table {
+    width: 100%;
+}
+
+input.sheet-fillwidth {
     width: 100%;
 }
 

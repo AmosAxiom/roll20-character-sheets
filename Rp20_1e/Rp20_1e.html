@@ -151,7 +151,7 @@
                     <table>
                         <tr>
                             <td>
-                                <input type="text" name="attr_SkillName" class="SkillName" / >
+                                <input type="text" class="sheet-fillwidth" name="attr_SkillName" class="SkillName" / >
                             </td>
                             <td>
                                 <select name="attr_SkillMod" class="SkillMod">
@@ -208,7 +208,16 @@
             <h3>Items:</h3>
             <fieldset class="repeating_Items">
                 <div class="sheet-minititle">
-                    <input type="number" name="attr_ItemQuantity" value="1"> of <input type="text" name="attr_ItemName">
+                    <table>
+                      <tr>
+                        <td>
+                          <input type="number" name="attr_ItemQuantity" value="1"> of
+                        </td>
+                        <td>
+                          <input type="text" class="sheet-fillwidth" name="attr_ItemName">
+                        </td>
+                      </tr>
+                    </table>
                 </div>
 
                 <table>
