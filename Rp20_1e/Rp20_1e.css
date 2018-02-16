@@ -1,4 +1,4 @@
-.sheet-Rp20v1sheet {
+.sheet-FCEsheet {
     padding: 10px;
 	background: linear-gradient(to bottom, rgb(180,180,200), white);
 
@@ -51,10 +51,6 @@ table {
     width: 100%;
 }
 
-input.sheet-fillwidth {
-    width: 100%;
-}
-
 .sheet-bordonright {
     border-right: #708090 1px;
 }
@@ -93,6 +89,10 @@ input {
     border: 0;
     font: inherit;
     color: inherit;
+}
+
+input.sheet-fullwidth {
+    width: 100%;
 }
 
 textarea {

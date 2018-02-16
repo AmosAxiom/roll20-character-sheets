@@ -1,11 +1,11 @@
-<div class="sheet-Rp20v1sheet">
+<div class="sheet-FCEsheet">
 
     <h2>
     <span name="attr_character_name"></span>:
     Level <input type="number" name="attr_CharLvl" value="1" />
     <input type="text" name="attr_Species" value="Species"/>
     <br />
-    <i>&#40; <input type="number" name="attr_Hitpoints" value="10" /> &#47; <input type="number" name="attr_Hitpoints_max" value="( (@{Con}+1)*(@{CharLvl}) ) + @{Constitution}" disabled="true"/> Hitpoints &#41; </i>
+    <i>&#40; <input type="number" name="attr_Hitpoints" value="10" /> &#47; <input type="number" name="attr_Hitpoints_max" value="10" /> Hitpoints &#41; </i>
     <br />
     &#91;Current conditions: <input type="text" name="attr_Conditions" value="None"/> &#93;
     </h2> <br />
@@ -151,7 +151,7 @@
                     <table>
                         <tr>
                             <td>
-                                <input type="text" class="sheet-fillwidth" name="attr_SkillName" class="SkillName" / >
+                                <input type="text" name="attr_SkillName" class="sheet-fullwidth" / >
                             </td>
                             <td>
                                 <select name="attr_SkillMod" class="SkillMod">
@@ -169,10 +169,13 @@
                 <table>
                     <tr>
                         <td>
-                            <button type="roll" value="&{template:attributecheck} {{name=@{SkillName}}} {{check=[[1d20+@{SkillPoints}+@{SkillMod}+(@{SkillMod})*@{SkillProficient}]]}} {{checktag=check}} {{proficient=[[1d1*@{SkillProficient}]]}}" >
+                            <button type="roll" value="&{template:attributecheck} {{name=@{SkillName}}} {{check=[[1d20+@{SkillPoints}+@{SkillMod}+@{SkillBonus}+(@{SkillMod})*@{SkillProficient}]]}} {{checktag=check}} {{proficient=[[1d1*@{SkillProficient}]]}}" >
                         </td>
                         <td>
                             Skill Points: <input type="number" name="attr_SkillPoints" class="SkillPoints" / >
+                        </td>
+                        <td>
+                            Bonus: <input type="number" name="attr_SkillBonus" class="SkillBonus" / >
                         </td>
                         <td>
                             Proficient: <input type="checkbox" name="attr_SkillProficient" class="SkillProficient" />
@@ -209,14 +212,9 @@
             <fieldset class="repeating_Items">
                 <div class="sheet-minititle">
                     <table>
-                      <tr>
-                        <td>
-                          <input type="number" name="attr_ItemQuantity" value="1"> of
-                        </td>
-                        <td>
-                          <input type="text" class="sheet-fillwidth" name="attr_ItemName">
-                        </td>
-                      </tr>
+                        <tr>
+                            <td> <input type="number" name="attr_ItemQuantity" value="1"> of </td> <td> <input type="text" class="sheet-fullwidth" name="attr_ItemName"> </td>
+                        </tr>
                     </table>
                 </div>
 
