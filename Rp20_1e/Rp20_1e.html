@@ -104,12 +104,36 @@
             		<td><input type="number" name="attr_Initiative" value="@{Dexterity}+@{InitiativeBonus}" disabled="true" /></td>
             		<td><button type="roll" value="&{template:attributecheck} {{name=Initiative}} {{check=[[1d20+@{Initiative}]]}} {{checktag=roll}}" ></button></td>
                 </tr>
-                <tr>
-                    <td align="right"><u>Move Speed:</u></td>
-                    <td><span name="attr_Strength"></span></td>
-                    <td><input type="number" name="attr_MoveBonus" value="0"</td>
-                    <td><input type="number" name="attr_initiative" value="floor(@{Strength}/2)-2+@{attr_MoveBonus}" disabled="true"</td>
-                </tr>
+            </table>
+
+            <br />
+            <br />
+            <hr />
+            <br />
+            <br />
+
+            <h3>Combat Stats:</h3>
+            <table>
+              <tr>
+                <th align="right">Stat</th>
+                <th>Bonuses</th>
+                <th>Total</th>
+              </tr>
+              <tr>
+                  <td align="right"><u>Move Speed:</u></td>
+                  <td><input type="number" name="attr_MoveBonus" value="0"</td>
+                  <td><input type="number" name="attr_MoveSpeed" value="floor(@{Strength}/2)-2+@{MoveBonus}" disabled="true"</td>
+              </tr>
+              <tr>
+                  <td align="right"><u>Actions:</u></td>
+                  <td><input type="number" name="attr_ActionsBonus" value="0"</td>
+                  <td><input type="number" name="attr_Actions" value="floor(@{Wisdom}/2)-2+@{ActionsBonus}" disabled="true"</td>
+              </tr>
+              <tr>
+                  <td align="right"><u>Conditions on Prepared:</u></td>
+                  <td><input type="number" name="attr_PreparableBonus" value="0"</td>
+                  <td><input type="number" name="attr_Preparable" value="floor((@{Int})/2)+1+@{PreparableBonus}" disabled="true"</td>
+              </tr>
             </table>
 
             <br />
