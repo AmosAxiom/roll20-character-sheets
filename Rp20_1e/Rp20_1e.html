@@ -122,12 +122,12 @@
               <tr>
                   <td align="right"><u>Move Speed:</u></td>
                   <td><input type="number" name="attr_MoveBonus" value="0"</td>
-                  <td><input type="number" name="attr_MoveSpeed" value="floor(@{Strength}/2)-2+@{MoveBonus}" disabled="true"</td>
+                  <td><input type="number" name="attr_MoveSpeed" value="floor((@{Str})/2)+3+@{MoveBonus}" disabled="true"</td>
               </tr>
               <tr>
                   <td align="right"><u>Actions:</u></td>
                   <td><input type="number" name="attr_ActionsBonus" value="0"</td>
-                  <td><input type="number" name="attr_Actions" value="floor(@{Wisdom}/2)-2+@{ActionsBonus}" disabled="true"</td>
+                  <td><input type="number" name="attr_Actions" value="floor((@{Wis})/2)+3+@{ActionsBonus}" disabled="true"</td>
               </tr>
               <tr>
                   <td align="right"><u>Conditions on Prepared:</u></td>
